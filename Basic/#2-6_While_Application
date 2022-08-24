@@ -1,0 +1,24 @@
+
+from random import randint
+
+print("welcome to python casino")
+
+playing = True
+pc_choice = randint(1,50) 
+
+while playing :
+  user_choice = int(input("Choice your number"))
+  if user_choice == pc_choice:
+    print("you win")
+    playing = False
+  elif user_choice < pc_choice:
+    print("Lower computer choosed")
+  else:
+    print("Higher computer choosed ")
+
+"""
+#첨에 elif 조건문 쪽에 '~~ and playing = True ' 이런식의 and 조건문을 넣었었는데 이렇게 하는것이 아니라 애초에 입력자가 처음 실패시 다시 값을 받아야 하므로 While문 안에 input 함수가 들어가 있어야 함. 
+
+#while playing = True
+이렇게 썼기 때문에 오류가 난 것임. {while 변수} 자체가 변수가 True 일때 아래의 명령을 이행한다는 의미이미로 = True 라고 적으면 안된다.
+"""
