@@ -1,0 +1,10 @@
+days_of_week = ["mon","tue","wed","thu","fri"]
+
+print(days_of_week.count("wed"))
+
+days_of_week.append("sat")
+
+print(days_of_week[2])
+
+#데이터에 결합된 함수를 메소드라고 부른다. 하지만 메소드는 함수와 다를 것이 없다.
+#함수가 데이터와 결합되어 있지 않다면 그냥 함수라고 부른다.
