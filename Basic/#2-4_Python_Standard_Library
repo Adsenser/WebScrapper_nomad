@@ -1,0 +1,12 @@
+from random import randint
+
+user_choice = int(input("Choice your number"))
+
+pc_choice = randint(1,50)
+
+if user_choice == pc_choice:
+  print("you win")
+elif user_choice < pc_choice:
+  print(f"Lower computer choosed {pc_choice}")
+else:
+  print("Higher computer choosed ",pc_choice)
