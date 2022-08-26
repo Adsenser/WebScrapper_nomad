@@ -15,6 +15,10 @@ print(player)
 print(player.get('fav'))
 print(player['fav'])
 
+#이런식의 응용도 가능하다
+print(player["friend"]["fav"])
+#이거는 player라는 딕셔너리 안에 또 friend라는 딕셔너리가 존재하고 거기 안에 fav라는 리스트가 존재하는 것이다. 이것을 이런식으로 fav만 뽑아올 수 있다.
+
 """
 리스트에서는 데이터들이 정렬이 되어있었으므로 dicts 에서와 달리 [0] 배열 순서를 고려해서 입력값을 주었어야 한다. 하지만 dicts의 경우 키-값이 쌍으로 이루어져 있다.
 
