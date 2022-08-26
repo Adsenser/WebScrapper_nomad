@@ -1,0 +1,22 @@
+player = {
+  'name': 'nico',
+  'age': 12,
+  'alive': True,
+  'fav': ['kimbap',"kimchi"] #찾아본 결과, 파이썬에서는 ''는 char ""는 str 이 문법을 꼭 지켜야만 되는 규칙은 없는 것 같다.
+}
+print(player.get('age'))
+
+player.pop('age')   #  pop  은 속성을 없앨때 사용한다.
+player['xp'] = 1500 # <-이건 딕셔너리 내부에 속성을 추가할 때 이용한다.
+player['fav'].append('noodles') #<- 이건 이미 존재하는 키 내부에 값을 추가할때 사용한다.
+
+print(player)
+#아래 둘은 출력결과가 동일하다.
+print(player.get('fav'))
+print(player['fav'])
+
+"""
+리스트에서는 데이터들이 정렬이 되어있었으므로 dicts 에서와 달리 [0] 배열 순서를 고려해서 입력값을 주었어야 한다. 하지만 dicts의 경우 키-값이 쌍으로 이루어져 있다.
+
+딕셔너리는 많은 속성들을 가지고 있는 데이터를 만들고 싶을 때 사용한다.
+"""
