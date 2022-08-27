@@ -1,0 +1,28 @@
+from requests import get
+
+websites = [
+  "google.com",
+  "https://naver.com",
+  "yahoo.com",
+  "https://daum.net"
+]
+
+results = {}
+
+for website in websites:
+  if not website.startswith("https://"): 
+    website = f"https://{website}"
+  response = get(website)
+  print(response.status_code)
+
+  if response.status_code == 200:
+    results[website] = "OK" #아까 만든 dic에 새로운 키를 추가하는 것
+  else:
+    results[website] = "Failed"
+
+print(results)
+  #get 함수는 웹사이트의 응답을 반환해준다.
+  # Response [200]을 받게 되는데 여기서 200이라는 숫자는 http 프로토콜에 의거한 것으로 200은 요청이 성공적으로 되었음을 의미한다.
+
+  #status_code를 붙이기 전에는 < Response [200] >과 같이 str 형태로 값이 반환된다. 저걸 붙이면 우리가 원하는 상태값만 바로 반환시킬 수 있다.
+
