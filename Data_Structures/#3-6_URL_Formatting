@@ -1,0 +1,19 @@
+websites = [
+  "google.com",
+  "https://naver.com",
+  "yahoo.com",
+  "https://daum.net"
+]
+
+for website in websites:
+  if not website.startswith("https://"): #website변수는 https://가 붙은 값으로 업데이트 해준다.
+    """
+if not: ~하지 않을 때 // 이걸 사용하면 else 로 따로 안해줘도 된다. 
+이거는 if websites.startswith("https://") == False: 와 동일하다
+    """
+    website = f"https://{website}"
+  print(website) #네이버랑 다음이 출력된것은 이 줄의 코드는 모든 website에서 동작하기 때문이다.
+print(website)
+"""
+print(website)를 for문 안에 안넣고 그냥 밖에다 빼 놓았을 경우에는 그냥 https://daum.net 요거 하나만 나온다. for문을 이용해 리스트에서 순차적으로 내려가게 해줘야 하므로 for문 안에 넣어줘야한다.
+"""
