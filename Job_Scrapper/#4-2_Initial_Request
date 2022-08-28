@@ -1,0 +1,13 @@
+from requests import get
+
+base_url = "https://weworkremotely.com/remote-jobs/search?utf8=%E2%9C%93&term="
+
+search_keyword = "python"
+
+response = get(f"{base_url}{search_keyword}")
+print(response.text)
+
+if response.status_code != 200:
+  print("Cant request website")
+else:
+  print(response.text)
